@@ -144,3 +144,11 @@ https://medium.com/cs-note/ubuntu16-04-install-cuda-9-0-cudnn-7-0-5-80c53404516c
 
 ### Installing ros package dependencies
 rosdep install --from-paths src --ignore-src -r -y
+
+## Power Management wireless 
+iwconfig
+cd /etc/NetworkManager/conf.d
+gedit default-wifi-powersave-on.conf
+change wifi.powersave = 2
+check iwconfig
+
