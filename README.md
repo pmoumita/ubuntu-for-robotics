@@ -60,13 +60,14 @@ bash install_ros.sh
 ```
 
 ## Install CuDNN:
+```
 wget https://s3.amazonaws.com/open-source-william-falcon/cudnn-9.0-linux-x64-v7.1.tgz  
 sudo tar -xzvf cudnn-9.0-linux-x64-v7.1.tgz  
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 rm -rf cudnn-9.0-linux-x64-v7.1.tgz
-
+```
 COpy to .bashrc
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
@@ -146,9 +147,19 @@ https://medium.com/cs-note/ubuntu16-04-install-cuda-9-0-cudnn-7-0-5-80c53404516c
 rosdep install --from-paths src --ignore-src -r -y
 
 ## Power Management wireless 
+```
 iwconfig
 cd /etc/NetworkManager/conf.d
 gedit default-wifi-powersave-on.conf
 change wifi.powersave = 2
 check iwconfig
+```
+
+## Chrome Size scaling for high res displays
+```
+sudo gedit /usr/share/applications/google-chrome.desktop
+Change scale factor to >1
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=n %U
+
+```
 
