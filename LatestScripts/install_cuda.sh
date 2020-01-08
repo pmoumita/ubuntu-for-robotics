@@ -5,8 +5,8 @@ sudo apt upgrade
 
 # Install Git
 sudo apt install git
-git config --global user.email "akathpal@umd.edu"
-git config --global user.name "Abhishek Kathpal"
+git config --global user.email "get2moumita@gmail.com"
+git config --global user.name "Moumita Paul"
 
 # Install Google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
